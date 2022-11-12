@@ -16,7 +16,7 @@ const (
 	l
 )
 
-var c, d int = 1, 2
+var c, d = 1, 2
 var e, f = 123, "hello"
 
 func main() {
@@ -33,9 +33,9 @@ func main() {
 	g, h := 123, "hello"
 	println(x, y, a, b, c, d, e, f, g, h)
 
-	_, numb, strs := numbers()
+	_, numb, str4 := numbers()
 	//只获取函数返回值的后两个
-	fmt.Println(numb, strs)
+	fmt.Println(numb, str4)
 
 	fmt.Println("i=", i)
 	fmt.Println("j=", j)
@@ -46,6 +46,7 @@ func main() {
 	fmt.Println(string(char))
 
 	var inf interface{} = "100"
+	//断言？ 接口的强转与int类型不一样
 	i2, err := inf.(int)
 	fmt.Println(i2, err)
 }
